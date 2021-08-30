@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&family=Lato&family=Yeseva+One&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Lato", sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.title--white,
+.title--orang {
+	font-family: "Yeseva One", cursive;
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 1.4em;
+	text-align: center;
+}
+
+.title--white::after,
+.title--orang::after {
+	display: block;
+}
+
+.title--white {
+	color: #ffffff;
+}
+.title--white::after {
+	content: url(images/venw.svg);
+}
+.title--orang {
+	color: #cc9900;
+}
+.title--orang::after {
+	content: url(images/znakorang.svg);
+}
+
+.header {
+	padding: 100px 0;
+	background-image: url(images/ban1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 750px;
+	color: #ffffff;
+	text-align: center;
+}
+.header h1 {
+	font-size: 90px;
+	text-transform: lowercase;
+	text-shadow: 2px 2px 0px #000000;
+}
+.header h1::after {
+	display: block;
+	content: url(images/V1.svg);
+}
+@media screen and (max-width: 576px) {
+	.header h1 {
+		font-size: 3em;
+	}
+}
+.header__item {
+	background-color: rgba(255, 255, 255, 0.6);
+	padding: 30px 0;
+	color: #ffffff;
+	text-transform: uppercase;
+	width: 218px;
+	display: inline-block;
+	border: 1px solid #ffffff;
+	font-size: 18px;
+	margin: 15px;
+}
+.header__item:hover {
+	color: #ffffff;
+	background-color: rgba(255, 255, 255, 0.7);
+	text-decoration: none;
+}
+
+.menu {
+	background-color: rgba(0, 0, 0, 0.75);
+	color: #ffffff;
+	text-align: center;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 1000;
+}
+.menu__items {
+	display: flex;
+	justify-content: flex-end;
+	margin: 0;
+}
+.menu__item {
+	padding: 15px 15px 0;
+}
+.menu__item::after {
+	content: "";
+	display: block;
+	width: 100%;
+	border: 1px solid #ffffff;
+	margin: 10px auto;
+	transform: scaleX(0);
+	transition: transform 0.5s;
+}
+.menu__item:hover::after {
+	transform: scaleX(1);
+}
+.menu a {
+	color: #ffffff;
+}
+
+.about-us {
+	padding: 100px 0;
+	min-height: 750px;
+	background-image: url(images/fon_as.jpg), linear-gradient(270deg, #f4f2f2 18.35%, #ffffff 84.09%);
+	background-size: contain;
+	background-blend-mode: overlay;
+	text-align: center;
+	box-shadow: inset 0px 4px 40px rgba(0, 0, 0, 0.1);
+}
+.about__dish {
+	width: 100%;
+}
+.about__cook {
+	margin: 15px;
+	transform: translateX(40px);
+}
+
+.ingradients {
+	padding: 100px 0;
+	min-height: 750px;
+	background-image: url(images/bg1.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #ffffff;
+	text-align: center;
+}
+.ingradients__photos {
+	display: flex;
+	justify-content: center;
+}
+.ingradients__photo {
+	width: 115px;
+	height: 115px;
+	border-radius: 100%;
+	margin: 7.5px;
+	overflow: hidden;
+	border: 5px solid #cc9900;
+}
+@media screen and (max-width: 576px) {
+	.ingradients__photo {
+		width: 100px;
+		height: 100px;
+	}
+}
+.ingradients img {
+	height: 100%;
+	transform: scale(1.3);
+}
+.ingradients__item {
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 50px;
+}
+
+.menus {
+	padding: 100px 0;
+	min-height: 750px;
+	background-image: url(images/bac.png), linear-gradient(270deg, #ffffff 18.35%, #f3f1f1 84.09%);
+	background-size: contain;
+	background-blend-mode: overlay;
+	box-shadow: inset 0px 4px 40px rgba(0, 0, 0, 0.1);
+}
+.menus__item {
+	padding: 15px 0px;
+}
+.menus__title {
+	padding: 7px 0;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #cc9900;
+	font-family: "Yeseva One", cursive;
+	font-size: 21px;
+	line-height: 1.5em;
+	color: #cc9900;
+}
+.menus__description {
+	padding: 7px 0;
+}
+
+.testinominals {
+	padding: 100px 0;
+	min-height: 750px;
+	background-image: url(images/bg2.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #ffffff;
+	text-align: center;
+}
+.testinominals div {
+	height: 100%;
+}
+.testinominals__item {
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 50px;
+}
+.testinominals__item p {
+	font-family: "Gentium Book Basic", serif;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 1.5em;
+	margin: 50px 0;
+}
+
+.reservetion {
+	padding: 100px 0;
+	min-height: 750px;
+	background-image: url(images/fon_as.jpg), linear-gradient(270deg, #f4f2f2 18.35%, #ffffff 84.09%);
+	background-size: contain;
+	background-blend-mode: overlay;
+	box-shadow: inset 0px 4px 40px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+.reservetion p {
+	font-family: "Lato", sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+}
+.reservetion__input {
+	display: block;
+	width: 100%;
+	outline: none;
+	font-style: italic;
+	outline: 1px solid #9b9b9b;
+}
+.reservetion__form p {
+	color: #cc9900;
+	text-align: left;
+	font-weight: bold;
+	margin: 10px 0;
+}
+.reservetion img {
+	width: 100%;
+}
+.reservetion input[type="submit"] {
+	font-style: normal;
+	background-color: #cc9900;
+	border: none;
+	padding: 5px;
+	outline: none;
+}
+.reservetion input[type="submit"]:hover {
+	background-color: #aa8000;
+}
+.reservetion input:focus {
+	outline: 1px solid #cc9900;
+}
+
+.footer {
+	padding: 100px 0;
+	min-height: 375px;
+	background-color: rgba(0, 0, 0, 0.75);
+	color: #ffffff;
+	text-align: center;
+}
+.footer__item {
+	margin-bottom: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
